@@ -1,5 +1,6 @@
 package com.ding.sell.service;
 import com.ding.sell.dataobject.ProductInfo;
+import com.ding.sell.dto.CartDTO;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
@@ -21,8 +22,9 @@ public interface ProductService {
     /**
      * 加库存
      */
-
+    void decreaseStock(List<CartDTO> cartDTOList);
     /**
      * 减库存
      */
+    void increaseStock(List<CartDTO> cartDTOList);
 }
